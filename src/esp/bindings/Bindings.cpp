@@ -77,6 +77,7 @@ PYBIND11_MODULE(habitat_sim_bindings, m) {
   esp::physics::initPhysicsBindings(m);
   esp::physics::initPhysicsObjectBindings(m);
   esp::physics::initPhysicsWrapperManagerBindings(m);
+  esp::assets::initAssetsBindings(m);
   esp::sim::initSimBindings(m);
   // Renderer relies on simulator class bindings
   esp::gfx::finalInitRenderer(pyRenderer);

@@ -482,7 +482,9 @@ void initSimBindings(py::module& m) {
           R"(Runtime perf stats are various scalars helpful for troubleshooting runtime perf. These values generally change after every sim step. See also get_runtime_perf_stat_names.)")
       .def("get_debug_line_render", &Simulator::getDebugLineRender,
            pybind11::return_value_policy::reference,
-           R"(Get visualization helper for rendering lines.)");
+           R"(Get visualization helper for rendering lines.)")
+      .def("get_joined_mesh", &Simulator::getJoinedMesh, 
+           R"(Get a joined mesh of the current scene. This is useful for debugging and visualization purposes.)");
 
   // ==== ReplayRenderer ====
   py::class_<AbstractReplayRenderer, AbstractReplayRenderer::ptr>(

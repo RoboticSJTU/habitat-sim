@@ -188,6 +188,13 @@ void initRenderInstanceHelperBindings(pybind11::module& m);
 
 }  // namespace sim
 
+namespace assets {
+/**
+ * @brief Specify bindings for esp::assets::ResourceManager and related classes.
+ */
+void initAssetsBindings(pybind11::module& m);
+}  // namespace assets
+
 }  // namespace esp
 
 #endif  // ESP_BINDINGS_BINDINGS_H_

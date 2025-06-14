@@ -39,6 +39,7 @@ pybind11_add_module(
   SceneBindings.cpp
   SensorBindings.cpp
   ShortestPathBindings.cpp
+  AssetBindings.cpp
   SimBindings.cpp
 )
 target_link_libraries(
